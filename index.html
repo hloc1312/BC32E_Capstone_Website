@@ -2,6 +2,13 @@
 <html lang="en">
   <head>
     <title>Corpvision Website</title>
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="./libs/owlCarousel/css/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="./libs/owlCarousel/css/owl.theme.default.min.css"
+    />
+    <!-- Light Box -->
     <link rel="stylesheet" href="./libs/lightBox/css/lightbox.min.css" />
     <!-- Animate Style CDN -->
     <head>
@@ -44,10 +51,10 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
-  <body>
+  <body id="myBody">
     <!-- Header -->
     <header id="header">
-      <nav class="navbar navbar-expand-md navbar-dark container">
+      <nav class="navbar navbar-expand-lg navbar-dark container">
         <!-- Brand -->
         <a class="navbar-brand" href="#">
           <i class="fa-solid fa-align-right"></i>
@@ -62,7 +69,7 @@
           data-toggle="collapse"
           data-target="#collapsibleNavbar"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
         </button>
 
         <!-- Navbar links -->
@@ -99,19 +106,22 @@
               <a class="nav-link" href="#">Contact</a>
             </li>
           </ul>
-        </div>
-
-        <!-- Search -->
-        <div class="header__navbar-search">
-          <i class="fa-solid fa-magnifying-glass mr-3"></i>
-          <i class="fa-regular fa-moon"></i>
+          <!-- Search -->
+          <div class="header__navbar-search">
+            <i class="fa-solid fa-magnifying-glass mr-3 icon-search"></i>
+            <div id="switchButton">
+              <i class="fa-regular fa-moon icon-moon"></i>
+              <i class="fa-solid fa-sun icon-sun"></i>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
 
     <!-- Carousel  -->
+    <!-- data-ride="carousel" -->
     <section id="carousel">
-      <div id="demo" class="carousel slide" data-ride="carousel">
+      <div id="demo" class="carousel slide">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="overlay"></div>
@@ -359,7 +369,7 @@
       <div class="container py-lg-5 py-md-4 py-2">
         <h3 class="text-center">Always there for your care, our Services</h3>
         <div class="row mt-lg-5 mt-4 text-center justify-content-center">
-          <div class="col-lg-4">
+          <div class="col-lg-4 col-md-6">
             <div class="card">
               <a href="#">
                 <img
@@ -654,12 +664,95 @@
     </section>
 
     <!-- FEEDBACK -->
-    <section id="id">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+    <section id="feedback" class="py-5">
+      <div class="container py-lg-4 py-md-3 py-2 pb-lg-0">
+        <h5 class="mb-1 text-center">Happy Clients Feedback</h5>
+        <h3 class="text-center mb-sm-5 mb-4">Reviews and Testimonials</h3>
+
+        <div class="owl-carousel">
+          <!-- Item 1 -->
+          <div class="item">
+            <blockquote>
+              Lorem ipsum dolor sit amet elit. Velit beatae laudantium voluptate
+              rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
+              Dolores molestias adipisci dolo amet!. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Esse architecto est ea sunt eligendi
+              cum?
+            </blockquote>
+            <div
+              class="item-information d-flex justify-content-center align-items-center"
+            >
+              <div class="item-img">
+                <img src="./image/team1.jpg" alt="" class="img-fluid" />
+              </div>
+              <div class="item-text">
+                <h3>John wilson</h3>
+                <p>Student</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="item">
+            <blockquote>
+              Lorem ipsum dolor sit amet elit. Velit beatae laudantium voluptate
+              rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
+              Dolores molestias adipisci dolo amet!.
+            </blockquote>
+            <div
+              class="item-information d-flex justify-content-center align-items-center"
+            >
+              <div class="item-img">
+                <img src="./image/team2.jpg" alt="" class="img-fluid" />
+              </div>
+              <div class="item-text">
+                <h3>Julia sakura</h3>
+                <p>Student</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="item">
+            <blockquote>
+              Lorem ipsum dolor sit amet elit. Velit beatae laudantium voluptate
+              rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
+              Dolores molestias adipisci dolo amet!.
+            </blockquote>
+            <div
+              class="item-information d-flex justify-content-center align-items-center"
+            >
+              <div class="item-img">
+                <img src="./image/team3.jpg" alt="" class="img-fluid" />
+              </div>
+              <div class="item-text">
+                <h3>Roy Linderson</h3>
+                <p>Student</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="item">
+            <blockquote>
+              Lorem ipsum dolor sit amet elit. Velit beatae laudantium voluptate
+              rem ullam dolore nisi voluptatibus esse quasi, doloribus tempora.
+              Dolores molestias adipisci dolo amet!.
+            </blockquote>
+            <div
+              class="item-information d-flex justify-content-center align-items-center"
+            >
+              <div class="item-img">
+                <img src="./image/team4.jpg" alt="" class="img-fluid" />
+              </div>
+              <div class="item-text">
+                <h3>Smith Johnson</h3>
+                <p>Student</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <!-- LATEST NEWS -->
     <section id="news" class="py-5">
@@ -953,9 +1046,56 @@
         var header = document.querySelector("header");
         header.classList.toggle("sticky", window.scrollY > 0);
       });
+
+      $(".navbar-toggler").on("click", function () {
+        $("header").toggleClass("active");
+      });
+      $(document).on("ready", function () {
+        if ($(window).width() > 991) {
+          $("header").removeClass("active");
+        }
+        $(window).on("resize", function () {
+          if ($(window).width() > 991) {
+            $("header").removeClass("active");
+          }
+        });
+      });
+
+      // Switch bg dark
+      document.getElementById("switchButton").onclick = function () {
+        document.getElementById("myBody").classList.toggle("dark");
+      };
     </script>
     <!-- BackToTop -->
     <script src="./libs/backToTop/util.js"></script>
     <script src="./libs/backToTop/main.js"></script>
+    <!-- Owl Carousel -->
+    <script src="./libs/owlCarousel/js/owl.carousel.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 20,
+          nav: false,
+          dots: true,
+          responsiveClass: true,
+          responsive: {
+            0: {
+              items: 1,
+              nav: false,
+            },
+            768: {
+              items: 1,
+              nav: false,
+            },
+            1000: {
+              items: 1,
+              nav: false,
+              loop: false,
+            },
+          },
+        });
+      });
+    </script>
   </body>
 </html>
